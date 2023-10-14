@@ -1,1308 +1,350 @@
 <!DOCTYPE html>
-<html lang="ar" style="--inner1Vh:9px; --sbw:0px;">
-  
+<html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReadDear</title>
-    <meta name="description" content="">
-    <link rel="icon" href="images/26387fa4f5b1e3f7b6217b27d79bf264.png" type="image/png" sizes="16x16">
-    <link rel="icon" href="images/2d0b56e7e51cf11036ad8734bdb67e2d.png" type="image/png" sizes="32x32">
-    <link rel="apple-touch-icon" href="images/725b756a69a7d4c235070e51acd85560.png" sizes="180x180">
-    
-    <!-- CSS file -->
-    <link rel="stylesheet" type="text/css" href="mystyle.css">
-    
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.readdear.com">
-    <meta property="og:title" content="readDear">
-    <meta property="og:image" content="images/e50d37277ce4670a492141e381c2f69e.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta name="twitter:card" content="summary_large_image">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Applight Template By W3 Template</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<!-- Font Google -->
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-    <noscript>
-      <style>
-        @keyframes pulse {}.animated { animation-play-state: running !important;}#horizontalMenu
-        { display: none;}#verticalMenu { display: block;}#menuButton { display:
-        flex;}
-      </style>
-    </noscript>
-    <script nonce="">
-      !
-      function() {
-        "use strict";
-        function t(t, n) {
-          let e;
-          return (...o) = >{
-            clearTimeout(e),
-            e = setTimeout((() = >{
-              t(...o)
-            }), n)
-          }
-        }
-        class n {
-          constructor() {
-            this.callbacks = [],
-            window.addEventListener("DOMContentLoaded", (() = >this.onDOMContentLoaded()))
-          }
-          onDOMContentLoaded() {
-            this.callbacks.sort(((t, n) = >t.priority - n.priority)).forEach((({
-              callback: t
-            }) = >t()))
-          }
-          runOnLoad(t) {
-            "loading" === document.readyState ? this.callbacks.push(t) : t.callback()
-          }
-        }
-        function e(t, e = Number.MAX_VALUE) {
-          var o; (window.canva_scriptExecutor = null !== (o = window.canva_scriptExecutor) && void 0 !== o ? o: new n).runOnLoad({
-            callback: t,
-            priority: e
-          })
-        }
-        class o {
-          constructor(t) {
-            this.items = [],
-            this.previousWidth = document.documentElement.clientWidth,
-            this.previousHeight = window.innerHeight;
-            const n = t((() = >this.onWindowResize()), 100);
-            window.addEventListener("resize", n)
-          }
-          onWindowResize() {
-            const t = document.documentElement.clientWidth,
-            n = window.innerHeight,
-            e = this.previousWidth !== t,
-            o = this.previousHeight !== n;
-            this.items.forEach((t = >{
-              const n = () = >{
-                t.callback(),
-                t.executed = !0
-              }; (!t.executed || e && t.options.runOnWidthChange || o && t.options.runOnHeightChange) && n()
-            })),
-            this.previousWidth = t,
-            this.previousHeight = n
-          }
-          runOnResize(t, n) {
-            this.items.push({
-              callback: t,
-              options: n,
-              executed: n.runOnLoad
-            }),
-            this.items.sort(((t, n) = >t.options.priority - n.options.priority)),
-            n.runOnLoad && e(t, n.priority)
-          }
-        }
-        function i(n, e, i = t) {
-          var r; (window.canva_debounceResize = null !== (r = window.canva_debounceResize) && void 0 !== r ? r: new o(i)).runOnResize(n, {
-            runOnLoad: !1,
-            runOnWidthChange: !0,
-            runOnHeightChange: !1,
-            priority: Number.MAX_VALUE,
-            ...e
-          })
-        }
-        const r = "--minfs",
-        c = "--rzf",
-        u = "--rfso",
-        s = "--bfso";
-        function a(t, n, e = .001) {
-          return Math.abs(t - n) < e
-        }
-        function d(t, n) {
-          return window.getComputedStyle(t).getPropertyValue(n)
-        }
-        function l(t, n, e) {
-          t.style.setProperty(n, e)
-        }
-        function m(t, n) {
-          const e = document.createElement("div");
-          e.style.setProperty(t, n),
-          document.body.append(e);
-          const o = d(e, t);
-          return e.remove(),
-          o
-        }
-        function f() {
-          const t = function() {
-            const t = parseFloat(m("font-size", "0.1px"));
-            return t > 1 ? t: 0
-          } (),
-          n = function(t) {
-            const n = 2 * Math.max(t, 1);
-            return n / parseFloat(m("font-size", `$ {
-              n
-            }
-            px`))
-          } (t);
-          if (function(t) {
-            if (0 === t) return;
-            l(document.documentElement, r, `$ {
-              t
-            }
-            px`),
-            i((() = >{
-              const n = 100 * t,
-              {
-                clientWidth: e
-              } = document.documentElement;
-              l(document.documentElement, c, n > e ? (e / n).toPrecision(4) : null)
-            }), {
-              runOnLoad: !0
-            })
-          } (t * Math.max(1, n)), a(n, 1)) return;
-          const e = a(parseFloat(d(document.documentElement, "font-size")), parseFloat(m("grid-template-columns", "1rem")));
-          l(document.documentElement, e ? u: s, n.toPrecision(4))
-        }
-        function h() {
-          document.querySelectorAll("img, image, video, svg").forEach((t = >t.addEventListener("contextmenu", (t = >t.preventDefault()))))
-        }
-        const p = "--sbw",
-        g = "--inner1Vh";
-        function w(t, n, e) {
-          t.style.setProperty(n, e)
-        }
-        function v() {
-          w(document.documentElement, g, window.innerHeight / 100 + "px"),
-          function() {
-            const t = window.innerWidth - document.documentElement.clientWidth;
-            w(document.documentElement, p, t >= 0 ? `$ {
-              t
-            }
-            px`: null)
-          } ()
-        }
-        var y;
-        const E = "undefined" != typeof window ? null === (y = window.navigator) || void 0 === y ? void 0 : y.userAgent: void 0;
-        const b = !(!E || (O = E, !O.match(/AppleWebKit\//) || O.match(/Chrome\//) || O.match(/Chromium\//)));
-        var O;
-        function L() {
-          document.querySelectorAll("svg").forEach((t = >t.style.background = "url('data:image/png;base64,')"))
-        }
-        let x;
-        function A() {
-          x || (x = Array.from(document.querySelectorAll("foreignObject")).filter((t = >0 === t.getBoundingClientRect().width)));
-          const t = function() {
-            const t = document.createElement("div");
-            t.style.fontSize = "100vw",
-            document.body.append(t);
-            const n = parseFloat(window.getComputedStyle(t).fontSize);
-            return t.remove(),
-            n / window.innerWidth
-          } ();
-          Array.from(x).forEach((n = >
-          function(t) {
-            return new Promise(((n, e) = >{
-              const o = t.querySelector("img");
-              o && !o.complete ? (o.addEventListener("load", (() = >n())), o.addEventListener("error", (() = >e()))) : n()
-            }))
-          } (n).
-          finally((() = >
-          function(t, n) {
-            const e = Array.from(t.children);
-            e.forEach(((t, n) = >{
-              if (t.hasAttribute("data-foreign-object-container")) t.style.transformOrigin = "",
-              t.style.transform = "";
-              else {
-                const o = document.createElement("div");
-                o.setAttribute("data-foreign-object-container", ""),
-                t.insertAdjacentElement("beforebegin", o),
-                t.remove(),
-                o.append(t),
-                e[n] = o
-              }
-            }));
-            const o = t.getScreenCTM();
-            if (!o) return;
-            const {
-              a: i,
-              b: r,
-              c: c,
-              d: u
-            } = o.scale(n);
-            e.forEach((t = >{
-              if (!t.hasAttribute("data-foreign-object-container")) return;
-              const {
-                style: n
-              } = t;
-              n.transformOrigin = "0px 0px",
-              n.transform = `matrix($ {
-                i
-              },
-              $ {
-                r
-              },
-              $ {
-                c
-              },
-              $ {
-                u
-              },
-              0, 0)`
-            }))
-          } (n, t)))))
-        } [function() {
-          e(f)
-        },
-        function() {
-          i(v, {
-            runOnLoad: !0,
-            runOnHeightChange: !0,
-            priority: 1
-          })
-        },
-        function() {
-          b && i(A, {
-            runOnLoad: !0
-          })
-        },
-        function() {
-          b && e(L)
-        },
-        function() {
-          e(h)
-        }].forEach((t = >t()))
-      } ();
-    </script>
-    <script nonce="">
-      window.C_CAPTCHA_IMPLEMENTATION = 'RECAPTCHA';
-    </script>
-    <script nonce="">
-      window.C_CAPTCHA_KEY = '6Ldk59waAAAAAMPqkICbJjfMivZLCGtTpa6Wn6zO';
-    </script>
-  </head>
-  
-  
-  <body>
-    <div id="root">
-      <nav style="position:sticky;top:0px;font-family:-apple-system, BlinkMacSystemFont, sans-serif;display:flex;justify-content:flex-end;align-items:center;background-color:#ffffff;border-bottom:1px solid rgba(0, 0, 0, 0.07);z-index:1;text-overflow:ellipsis;height:50px;box-sizing:border-box;">
-        <input id="menuToggle" type="checkbox" style="display:none;">
-        <label id="menuButton" for="menuToggle">
-          <div id="menuButtonIcon" style="width:24px;padding:8px;">
-            <svg viewBox="0 0 24.0 24.0" preserveAspectRatio="none" style="background:url('data:image/png;base64,');">
-              <path d="M5.75 5.25h12.5a.75.75 0 1 1 0 1.5H5.75a.75.75 0 0 1 0-1.5zm0 6h12.5a.75.75 0 1 1 0 1.5H5.75a.75.75 0 1 1 0-1.5zm0 6h12.5a.75.75 0 1 1 0 1.5H5.75a.75.75 0 1 1 0-1.5z">
-              </path>
-            </svg>
-          </div>
-        </label>
-        <ul id="verticalMenu">
-          <li class="navMenuLink">
-            <a class="navMenuLinkContent" href="https://www.readdear.com/#home"
-            title="Home">
-              Home
-            </a>
-          </li>
-          <li class="navMenuLink">
-            <a class="navMenuLinkContent" href="https://www.readdear.com/#about"
-            title="About">
-              Languages 
-            </a>
-          </li>
-          <li class="navMenuLink">
-            <a class="navMenuLinkContent" href="https://www.readdear.com/#details"
-            title="Details">
-              Why
-            </a>
-          </li>
-          <li class="navMenuLink">
-            <a class="navMenuLinkContent" href="https://www.readdear.com/#contact"
-            title="Contact">
-              Contact
-            </a>
-          </li>
-        </ul>
-        <ul id="horizontalMenu" style="margin:0;padding:0;visibility:hidden;">
-          <li class="navMenuLink">
-            <a class="navMenuLinkContent" href="https://www.readdear.com/#home"
-            title="Home">
-              Home
-            </a>
-          </li>
-          <li class="navMenuLink">
-            <a class="navMenuLinkContent" href="https://www.readdear.com/#about"
-            title="About">
-              Languages 
-            </a>
-          </li>
-          <li class="navMenuLink">
-            <a class="navMenuLinkContent" href="https://www.readdear.com/#details"
-            title="Details">
-              Why
-            </a>
-          </li>
-          <li class="navMenuLink">
-            <a class="navMenuLinkContent" href="https://www.readdear.com/#contact"
-            title="Contact">
-              Contact
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <section id="home" style="position:relative;overflow:hidden;display:grid;align-items:center;grid-template-columns:auto 100rem auto;z-index:0;">
-        <div id="CVBSOWyu1QkehJys" style="grid-area:1 / 1 / 2 / 4;display:grid;position:absolute;min-height:100%;min-width:100%;">
-          <div id="AUJ4fz1DubLNKHB0" style="z-index:0;">
-            <div id="VAkcZxVNo34yXaJ8" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
-              <div id="floRIU7o0CZjdh1d" style="width:100%;height:100%;opacity:1.0;">
-                <div id="aMUjUgnC40vlfVNy" style="background-color:#3c55ff;opacity:1.0;transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
-                </div>
-              </div>
-            </div>
+
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container"> <a class="navbar-brand navbar-logo" href="#"> <img src="images/logo.png" alt="logo" class="logo-1"> </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="fas fa-bars"></span> </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"> <a class="nav-link" href="" data-scroll-nav="0">Home</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="1">About</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="2">Features</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="6">Contact</a> </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- End Navbar --> 
+<!-------Banner Start------->
+<section class="banner" data-scroll-index='0'>
+  <div class="banner-overlay">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-12">
+          <div class="banner-text">
+            <h2 class="white">free secure kids reading material provider</h2>
+            <h6 class="white">BE ONE FROM OUR FAMILY BY START READING IN READDEAR </p>
+            <ul>
+              <li><a href="https://en.readdear.com"><img src="images/appstore.png" class="wow fadeInUp" data-wow-delay="0.4s"/></a></li>
+              <li><a href="#"><img src="images/playstore.png" class="wow fadeInUp" data-wow-delay="0.7s"/></a></li>
+            </ul>
           </div>
         </div>
-        <div id="rOcd15FLj9U1DxwJ" style="display:grid;position:relative;grid-area:1 / 2 / 2 / 3;">
-          <div id="qgA68tOAbmsCvMbh" style="z-index:1;">
-            <div id="GxwvhnipD5Yhm4v1" style="padding-top:142.85714286%;transform:rotate(0deg);">
-              <div id="XgeOmtaOcP0KDFLO" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
-                <svg id="EBaS7EPzAcuuaqmN" viewBox="0 0 350.0 500.0" style="width:100%;height:100%;opacity:1.0;overflow:hidden;position:absolute;top:0%;left:0%;background:url('data:image/png;base64,');">
-                  <g id="WAlzIqrIKD6BwvUM" style="transform:scale(1, 1);">
-                    <foreignObject id="IyIWw8Xi8oxmnJja" style="width:350px;height:500px;">
-                      <div id="IJ8qwm453S8p7Jwx" style="clip-path:path('M270.0,500.0 L80.0,500.0 C35.79999923706055,500.0 0.0,464.20000076293945 0.0,420.0 L0.0,80.0 C0.0,35.79999923706055 35.79999923706055,0.0 80.0,0.0 L270.0,0.0 C314.20000076293945,0.0 350.0,35.79999923706055 350.0,80.0 L350.0,420.0 C350.0,464.20001220703125 314.20001220703125,500.0 270.0,500.0 Z');">
-                        <div id="mnwFmQZlaEeVm1xD" style="transform:scale(1, 1);transform-origin:175px 250px;">
-                          <img src="images/70a82dd257f8e2be19f04a8a822cb65b.jpg" alt="Serious black kids reading interesting book together"
-                          loading="lazy" srcset="images/78253f3b1d03b93ba44a0aa01952e1f1.jpg 1200w, images/70a82dd257f8e2be19f04a8a822cb65b.jpg 2400w"
-                          sizes="(max-width: 375px) 196vw, (min-width: 375.05px) and (max-width: 480px) 200vw, (min-width: 480.05px) and (max-width: 768px) 178.25566379vw, (min-width: 768.05px) and (max-width: 1024px) 133.69174785vw, (min-width: 1024.05px) 100.2198754vw"
-                          style="transform:translate(-200px, 0px) rotate(0deg);transform-origin:375px 250px;width:750px;height:500px;display:block;opacity:1.0;object-fit:fill;">
-                        </div>
-                      </div>
-                    </foreignObject>
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div id="Ts2ORTe2Y4OHOs97" style="z-index:2;">
-            <div id="YQT9vt2XbI5eP7ki" style="padding-top:100%;transform:rotate(0deg);">
-              <div id="tuElO0MotD0LWEIP" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
-                <div id="E371RC9PnqZLbky5" style="width:100%;height:100%;opacity:1.0;">
-                  <div id="OcJsXStDARidGipS" style="transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
-                    <div id="Y9yZRQcshn0601es" style="width:calc(100% * max(1, var(--scale-fill, 1)));height:calc(100% / min(1, var(--scale-fill, 1)));position:absolute;top:50%;left:50%;opacity:1.0;animation:pulse 1.5s ease-in-out infinite;">
-                      <img src="images/2167f69df3b561bc8f2e9ae5fea7bf26.png" loading="lazy"
-                      style="width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%;transform:translate(-50%, -50%) rotate(0deg);">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="Xwy0ybbAmlkOL0Lh" style="z-index:6;">
-            <div id="lVsR3heI5Ke00h9T" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
-              <div id="fSFIT1aVcJpHnKZD" style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:flex-start;width:100%;height:100%;">
-                <p id="Pl6VyvfrnFcjPvZU" style="color:#ffffff;direction:ltr;font-family:YAFdJsyuOPM-0;margin-left:0em;line-height:1.04233897em;text-align:left;text-transform:uppercase;letter-spacing:0.05em;">
-                  <span id="SKXK4ct1kYf9ZzgX" style="color:#ffffff;font-weight:500;">
-                    read dear
-                  </span>
-                  <br>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div id="EBgYj93nbFHiWOYv" style="z-index:7;">
-            <div id="CLYYHs389Ag2QfaH" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
-              <div id="XEHP8hA0SYryZNpt" style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:flex-start;width:100%;height:100%;">
-                <p id="kgjrZebGJn7ZThf9" style="color:#ffffff;direction:ltr;font-family:YAFdJs2qTWQ-0;margin-left:0em;line-height:1.37500573em;text-align:left;text-transform:none;letter-spacing:0.005em;">
-                  <span id="he1hjESZdWJlYa4n" style="color:#ffffff;">
-                    free secure kids reading material provider
-                  </span>
-                  <br>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div id="Nu5UU4VYzCIjHt0x" style="z-index:8;">
-            <div id="ceTK2drCvhLPnllL" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
-              <div id="kMip2s40sCadH5IH" style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:flex-start;width:100%;height:100%;">
-                <p id="NRrTsOF39xpF5zgF" style="color:#ffffff;direction:ltr;font-family:YAFdJsyuOPM-0;margin-left:0em;line-height:1.49999732em;text-align:left;text-transform:uppercase;letter-spacing:0.16em;">
-                  <span id="sJC5pj68PyMxgfL8" style="color:#ffffff;">
-                    be one from our family by start reading in the website
-                  </span>
-                  <br>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div id="qH8st5pAD7zfifIW">
-            <div id="dRfvvIfhdkn9YlXK" style="display:grid;position:relative;">
-              <div id="p3g4XW7W0CK6rAuz" style="display:grid;position:relative;grid-area:2 / 2 / 3 / 3;">
-                <div id="ADIKxj95PnZ1CqGR" style="z-index:4;">
-                  <div id="ZvPC7OgrnilkvhME" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
-                    <svg id="cXKzu8aM5Agmp5lL" viewBox="0 0 64.0 22.9409" preserveAspectRatio="none"
-                    style="width:100%;height:100%;opacity:1.0;overflow:hidden;position:absolute;top:0%;left:0%;background:url('data:image/png;base64,');">
-                      <g id="aIlpk7RSgtXbl2v5" style="transform:scale(1, 1);">
-                        <path id="tV4ppidvbm9zbU6v" d="M10.07680492,0.0 L53.92319508,0.0 C59.48846077,0.0 64.0,4.51153924 64.0,10.07680492 L64.0,12.86405774 C64.0,18.42932342 59.48846076,22.94086266 53.92319508,22.94086266 L10.07680492,22.94086266 C4.51153923,22.94086265 0.0,18.42932342 0.0,12.86405774 L0.0,10.07680492 C0.0,4.51153923 4.51153924,0.0 10.07680492,0.0 Z"
-                        style="fill:#ff88d7;opacity:1.0;">
-                        </path>
-                      </g>
-                    </svg>
-                  </div>
-                </div>
-                <div id="nVtn89DsirYVSPtM" style="z-index:5;">
-                  <div id="E3nZHlnv4RPIFlgh" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
-                    <div id="r231901BuhOAAY9I" style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:center;width:100%;height:100%;">
-                      <p id="p6orJUYjsgWC3ykM" style="color:#000000;font-family:YAFdJs2qTWQ-0;line-height:1.45312727em;text-align:center;text-transform:none;letter-spacing:0.005em;">
-            <a id="XQAnJ6eXlsYfWg28" style="color:#000000;text-decoration:none;" href="https://www.readdear.com/#about">
-              Join Us
-            </a> 
-          </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="about" style="position:relative;overflow:hidden;display:grid;align-items:center;grid-template-columns:auto 100rem auto;z-index:0;margin-top:-1px;">
-        <div id="ViTGLMQLynNzfuxx" style="grid-area:1 / 1 / 2 / 4;display:grid;position:absolute;min-height:100%;min-width:100%;">
-          <div id="cSMfWuKy2jvioOmk" style="z-index:0;">
-            <div id="hv2zuTAGCxy2TKRo" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
-              <div id="OErVDcAt5qgjZIQI" style="width:100%;height:100%;opacity:1.0;">
-                <div id="pLOQ5pS68zTPjKoD" style="background-color:#ffffff;opacity:1.0;transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="JSFSlNvglDfZy9hI" style="display:grid;position:relative;grid-area:1 / 2 / 2 / 3;">
-          <div id="gQfpo8WoBQ5gRphr">
-            <div id="DqoFCg69ShIn6lJu" style="display:grid;position:relative;grid-area:3 / 2 / 5 / 5;">
-              <div id="mUBxioJ5i3yzFxI0" style="display:grid;position:relative;grid-area:3 / 4 / 5 / 5;">
-                <div id="pS6tWRj2EDvCSpfr" style="z-index:3;">
-                  <div id="MbZDAPm71Iph7jy5" style="padding-top:161.35693215%;transform:rotate(0deg);">
-                    <div id="XVoMUKjVMt1T0HYU" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
-                      <div id="LiYVzaA3y6iisriq" style="width:100%;height:100%;opacity:1.0;">
-                        <div id="bB2CmL2PKXGETMB6" style="transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
-                          <div id="a6IT34OVO0SjoCsB" style="width:calc(242.03539823% * max(1, var(--scale-fill, 1)));height:calc(100% / min(1, var(--scale-fill, 1)));position:absolute;top:50%;left:50%;opacity:1.0;animation:pulse 1.5s ease-in-out infinite;">
-                            <img src="images/11c80781178cfa4f3320fd553c4a59b7.jpg" alt="A Boy Reading a Book"
-                            loading="lazy" srcset="images/2335978bea8e5f83fd3af0ecc0504ca7.jpg 1200w, images/11c80781178cfa4f3320fd553c4a59b7.jpg 2400w"
-                            sizes="(max-width: 375px) 109.72249446vw, (min-width: 375.05px) and (max-width: 480px) 111.96172904vw, (min-width: 480.05px) and (max-width: 768px) 109.96241245vw, (min-width: 768.05px) and (max-width: 1024px) 112.46155819vw, (min-width: 1024.05px) 119.78921599vw"
-                            style="width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%;transform:translate(-50%, -50%) rotate(0deg);">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div id="i6wVc2klniO0mTTh" style="display:grid;position:relative;grid-area:3 / 3 / 4 / 4;">
-                  <div id="eDmrm4AZHihaYfPB" style="z-index:4;">
-                    <div id="ABWUkfagX2GOLLwf" style="padding-top:162.7742318%;transform:rotate(0deg);">
-                      <div id="lIJSouqIUuVMuLjq" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
-                        <svg id="fJzr1pyqaCeA6bSd" viewBox="0 0 117.4585 191.1921" style="width:100%;height:100%;opacity:0.89;overflow:hidden;position:absolute;top:0%;left:0%;background:url('data:image/png;base64,');">
-                          <g id="gmj0qBAZMB4FLHaF" style="transform:scale(1, 1);">
-                            <path id="UvpxXR251AIcUiey" d="M9.9451592,0.0 L107.51329874,0.0 C110.15091896,0.0 112.68050912,1.04779055 114.54558826,2.91286969 116.41066740000001,4.77794883 117.45845795,7.30753898 117.45845795,9.9451592 L117.45845795,181.24693369 C117.45845795,183.88455391 116.41066740000001,186.41414407 114.54558826,188.27922321 112.68050912,190.14430235 110.15091896,191.1920929 107.51329874,191.1920929 L9.9451592,191.1920929 C7.30753899,191.1920929 4.77794883,190.14430235 2.91286969,188.27922321 1.04779055,186.41414406 0.0,183.88455391 0.0,181.24693369 L0.0,9.9451592 C0.0,7.30753899 1.04779055,4.77794883 2.91286969,2.91286969 4.77794883,1.04779055 7.30753899,0.0 9.9451592,0.0 Z"
-                            style="fill:#3c55ff;opacity:1.0;">
-                            </path>
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div id="TCQYuzIOThQO7MBX" style="z-index:10;">
-                    <div id="DV2VACmRBD8Q3Jpj" style="padding-top:103.28%;transform:rotate(0deg);">
-                      <div id="bEWSC6y36OhH5UjU" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
-                        <svg id="DhSuEl3RKIlk1fpl" viewBox="0 0 500.0 516.4" style="width:100%;height:100%;opacity:1.0;overflow:hidden;position:absolute;top:0%;left:0%;background:url('data:image/png;base64,');">
-                          <g id="s97YBYW05E3UxyJU" style="transform:scale(1, 1);">
-                            <foreignObject id="DeQizNZ8dWgGyaf9" style="width:500px;height:516.4px;">
-                              <div id="eUPnGtwEjkA85dP5" style="clip-path:path('M494.1000061035156,427.29998779296875 C494.1000061035156,473.29998779296875 456.8000068664551,510.49998474121094 410.90000915527344,510.49998474121094 L89.0999984741211,510.49998474121094 C43.099998474121094,510.49998474121094 5.900001525878906,473.1999855041504 5.900001525878906,427.29998779296875 L5.900001525878906,89.0999984741211 C5.900001525878906,43.099998474121094 43.20000076293945,5.900001525878906 89.0999984741211,5.900001525878906 L410.89998626708984,5.900001525878906 C456.89998626708984,5.900001525878906 494.09998321533203,43.20000076293945 494.09998321533203,89.0999984741211 L494.09998321533203,427.30001068115234 Z');">
-                                <div id="rtahF0IYEGcFXJhK" style="transform:scale(1, 1);transform-origin:250px 258px;">
-                                  <img src="images/2167f69df3b561bc8f2e9ae5fea7bf26.png" loading="lazy"
-                                  style="transform:translate(-2.3px, 5.9px) rotate(0deg);transform-origin:252.3px 252.3px;width:504.6px;height:504.6px;display:block;opacity:1.0;object-fit:fill;">
-                                </div>
-                              </div>
-                            </foreignObject>
-                            <path id="Ln76fyy956aygQ0R" d="M410.8999938964844,516.4000244140625 L89.0999984741211,516.4000244140625 C40.0,516.4000244140625 0.0,476.3999938964844 0.0,427.29998779296875 L0.0,89.0999984741211 C0.0,40.0 40.0,0.0 89.0999984741211,0.0 L410.89998626708984,0.0 C460.0,0.0 500.0,40.0 500.0,89.0999984741211 L500.0,427.2000045776367 C500.0,476.4000053405762 460.0,516.4000015258789 410.9000015258789,516.4000015258789 Z M89.0999984741211,11.800000190734863 C46.5,11.800000190734863 11.799995422363281,46.500000953674316 11.799995422363281,89.10000324249268 L11.799995422363281,427.2000093460083 C11.799995422363281,469.8000078201294 46.499996185302734,504.5000123977661 89.0999984741211,504.5000123977661 L410.89998626708984,504.5000123977661 C453.49998474121094,504.5000123977661 488.19998931884766,469.80001163482666 488.19998931884766,427.2000093460083 L488.19998931884766,89.0999984741211 C488.19998931884766,46.5 453.4999885559082,11.799995422363281 410.89998626708984,11.799995422363281 L89.0999984741211,11.799995422363281 Z"
-                            style="fill:#f26fff;opacity:1.0;">
-                            </path>
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div id="Kcj1S82oBmwSmoKi" style="z-index:11;">
-                    <div id="A282JifWILA0Up2l" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
-                      <div id="UCel1CrsezosGyZT" style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:flex-start;width:100%;height:100%;">
-                        <p id="kTpqkBWPvuvSIYlQ" style="color:#ff88d7;direction:ltr;font-family:YAFdJsyuOPM-0;margin-left:0em;line-height:1.09688905em;text-align:left;text-transform:uppercase;letter-spacing:0.008em;">
-                          <span id="Lk69qT48BURqNlze" style="color:#ff88d7;font-weight:500;">
-                            readdear in englich
-                          </span>
-                          <br>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div id="sucLcLNjUNVvw26u" style="z-index:12;">
-                    <div id="ibq54WqxH79kMa05" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
-                      <div id="gMEXi2vcrSIMBYBW" style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:flex-start;width:100%;height:100%;">
-                        <p id="AX2yvjWepNpeQofv" style="color:#000000;direction:ltr;font-family:YAFdJs2qTWQ-0;margin-left:0em;line-height:1.49703089em;text-align:left;text-transform:none;letter-spacing:0.005em;">
-                          <span id="i5dpLCNJP9SEU4Ht" style="color:#000000;font-weight:700;">
-                            contain the next:
-                          </span>
-                          <br>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div id="fccnqkrvSV5qcnoe" style="z-index:13;">
-                    <div id="e2mvZfuEqkBXNTG5" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
-                      <div id="nTUZoUIcNF9TqOXp" style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:flex-start;width:100%;height:100%;">
-                        <p id="FUWGZs1fxYz049Tu" style="color:#000000;direction:ltr;font-family:YAFdJs2qTWQ-0;margin-left:0em;line-height:1.49703089em;text-align:left;text-transform:none;letter-spacing:0.005em;">
-                          <span id="riOYBlpi9dnFuM3P" style="color:#000000;font-weight:700;">
-                            reading part:
-                          </span>
-                          <span id="ZGA3BP6oEujcud97" style="color:#000000;">
-                            Read a vast collection of captivating stories, articles, biographies,
-                            and more for young readers.
-                          </span>
-                          <br>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div id="uSciW8JYhEAkvsgF" style="z-index:14;">
-                    <div id="biaFD4DjfZgf0ZZz" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
-                      <div id="aprkPsxqB2bQXTuy" style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:flex-start;width:100%;height:100%;">
-                        <p id="DL2h3TS0oenylBT3" style="color:#000000;direction:ltr;font-family:YAFdJs2qTWQ-0;margin-left:0em;line-height:1.49703089em;text-align:left;text-transform:none;letter-spacing:0.005em;">
-                          <span id="nWh4ivFNoW6Bxm3B" style="color:#000000;font-weight:700;">
-                            writeing part:
-                          </span>
-                          <span id="zqthwRe1Uex2kCWt" style="color:#000000;">
-                            Empowers young writers to create and share their stories, articles, and
-                            poems.
-                          </span>
-                          <br>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                 <div id="FGGR2FY9zzEMCog1" style="display:grid;position:relative;grid-area:13 / 7 / 14 / 9;">
-  <div id="hem9vmWnx0JnzZAe" style="display:grid;position:relative;grid-area:2 / 2 / 3 / 3;">
-    <div id="JYKp6bBcTI02MlO8" style="z-index:6;">
-      <div id="QZnaCeEBhRMB4Ytj" style="padding-top:25.67229474%;transform:rotate(0deg);">
-        <div id="wwuN1WYKmFwulPxU" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
-          <svg id="zPSwCpQjYayCt83c" viewBox="0 0 64.0 16.4303" style="width:100%;height:100%;opacity:1.0;overflow:hidden;position:absolute;top:0%;left:0%;background:url('data:image/png;base64,');">
-            <g id="GxyUgK3bqqQ2YyK1" style="transform:scale(1, 1);">
-              <path id="ZWM46BCmgLZGYEYW" d="M8.21513462,0.0 L55.78486538,0.0 C57.96365455,0.0 60.053206180000004,0.86552063 61.59384278,2.40615722 63.13447937,3.94679382 64.0,6.03634545 64.0,8.21513462 L64.0,8.21513462 C64.0,12.75222819 60.32195895,16.43026924 55.78486538,16.43026924 L8.21513462,16.43026924 C6.03634545,16.43026924 3.94679382,15.56474861 2.40615722,14.02411202 0.86552063,12.48347542 0.0,10.39392379 0.0,8.21513462 L0.0,8.21513462 C0.0,6.03634545 0.86552063,3.94679382 2.40615722,2.40615722 3.94679382,0.86552063 6.03634545,0.0 8.21513462,0.0 Z" style="fill:#ff88d7;opacity:1.0;">
-              </path>
-            </g>
-          </svg>
-        </div>
+        <div class="col-md-4 col-sm-12"> <img src="images/iphone-screen.png" class="img-fluid wow fadeInUp"/> </div>
       </div>
     </div>
-    <div id="WydtubthdSu9BLzu" style="z-index:7;">
-      <div id="jC3X2onWz08xptPV" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
-        <div id="en7E0TQugkkUTgqV" style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:center;width:100%;height:100%;">
-          <p id="p6orJUYjsgWC3ykM" style="color:#000000;font-family:YAFdJs2qTWQ-0;line-height:1.45312727em;text-align:center;text-transform:none;letter-spacing:0.005em;">
-            <a id="XQAnJ6eXlsYfWg28" style="color:#000000;text-decoration:none;" href="https://en.readdear.com">
-              Go English
-            </a> 
-          </p>
+  </div>
+  <span class="svg-wave"> <img class="svg-hero" src="images/applight-wave.svg"> </span> </section>
+
+<!-------Banner End------->
+
+<!-------About End------->
+
+<section class="about section-padding prelative" data-scroll-index='1'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="sectioner-header text-center">
+          <h3>Why did we make readdear!</h3>
+          <span class="line"></span>
+          
+        </div>
+        <div class="section-content text-center">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="icon-box wow fadeInUp" data-wow-delay="0.4s"> <i class="fas fa-globe" aria-hidden="true"></i>
+                <h5>Addressing the Detrimental Impact on Young Minds</h5>
+                <p>The prevalent scroll-down method, widely adopted across the Internet, is eroding children's attention spans, reducing their focus to less than one minute.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="icon-box wow fadeInUp" data-wow-delay="0.4s"> <i class="fa fa-ban" aria-hidden="true"></i>
+                <h5>Challenges in Child-Friendly Platforms</h5>
+                <p>Today, a disturbing number of children's platforms inadvertently expose them to adult content, thereby jeopardizing their safety and well-being.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="icon-box wow fadeInUp" data-wow-delay="0.6s"> <i class="fas fa-book" aria-hidden="true"></i>
+                <h5>Promoting the Right to Read</h5>
+                <p>Our mission is to provide children with a platform where they can read without interruptions. We believe that reading should be accessible and free, allowing children to engage with valuable content without the need for endless scrolling on social media.</p>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-------About End------->
+<!-------Video Start------->
+<section class="video-section prelative text-center white">
+  <div class="section-padding video-overlay">
+    <div class="container">
+      <h3>Watch Now</h3>
+      <i class="fa fa-play" id="video-icon" aria-hidden="true"></i>
+      <div class="video-popup">
+        <div class="video-src">
+          <div class="iframe-src">
+            <iframe src="https://www.youtube.com/embed/Ku52zNnft8k?rel=0&amp;showinfo=0" allowfullscreen></iframe>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-                </div>
-              </div>
-              <div id="DCL8vv8xGtstDwrs" style="display:grid;position:relative;grid-area:2 / 2 / 4 / 3;">
-                <div id="oFkRjbB0cIaqi7OD" style="z-index:2;">
-                  <div id="OkALZJXYrKEjNqVX" style="padding-top:161.35693215%;transform:rotate(0deg);">
-                    <div id="S20FaJ7KHF77JXx4" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
-                      <div id="gXBEWOfJ3Ck2f42W" style="width:100%;height:100%;opacity:1.0;">
-                        <div id="pJGN0IRRpCjXcVMv" style="transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
-                          <div id="QP3N4eoqHSpF8cLK" style="width:calc(242.03539823% * max(1, var(--scale-fill, 1)));height:calc(100% / min(1, var(--scale-fill, 1)));position:absolute;top:50%;left:50%;opacity:1.0;animation:pulse 1.5s ease-in-out infinite;">
-                            <img src="images/c384a4310daa1ccf4a4b51edc78ecca2.jpg" alt="Girl In Blue Shirt Reading A Book"
-                            loading="lazy" srcset="images/c185f9f62bf29bb776884660a8f37604.jpg 1536w, images/c384a4310daa1ccf4a4b51edc78ecca2.jpg 3072w"
-                            sizes="(max-width: 375px) 110.03626273vw, (min-width: 375.05px) and (max-width: 480px) 112.28190074vw, (min-width: 480.05px) and (max-width: 768px) 110.2768668vw, (min-width: 768.05px) and (max-width: 1024px) 112.78315923vw, (min-width: 1024.05px) 120.1317716vw"
-                            style="width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%;transform:translate(-50%, -50%) rotate(0deg);">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div id="vSQHLvbCv5fN9y0i" style="display:grid;position:relative;grid-area:3 / 3 / 5 / 4;">
-                  <div id="kGpRqJwHPzvEHKWJ" style="z-index:21;">
-                    <div id="tzZCz6k17elPpcxy" style="padding-top:162.68019902%;transform:rotate(0deg);">
-                      <div id="q5k6AmyN1oARqR8f" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
-                        <svg id="I0fFWDHzbFg9wc7X" viewBox="0 0 165.0903 268.5692" style="width:100%;height:100%;opacity:0.89;overflow:hidden;position:absolute;top:0%;left:0%;background:url('data:image/png;base64,');">
-                          <g id="YvFBClbA4QvwYWCE" style="transform:scale(1, 1);">
-                            <path id="M5rOHOsdwkW3rfAw" d="M0.0,0.0 L165.09030496055303,0.0 L165.09030496055303,268.56923667050256 L0.0,268.56923667050256 Z"
-                            style="fill:#000000;opacity:1.0;">
-                            </path>
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div id="yneh60Gtp6lQQ2st" style="display:grid;position:relative;grid-area:3 / 4 / 6 / 6;">
-                    <div id="XpuI3svtQAeclnY7" style="z-index:15;">
-                      <div id="M82fAgIVvzb1l6TW" style="padding-top:162.7742318%;transform:rotate(0deg);">
-                        <div id="IasWF7yUpzjHYtMl" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
-                          <svg id="XWIJGqjJDNwDzywm" viewBox="0 0 117.4585 191.1921" style="width:100%;height:100%;opacity:0.89;overflow:hidden;position:absolute;top:0%;left:0%;background:url('data:image/png;base64,');">
-                            <g id="deg2cE3yN0oMTIRc" style="transform:scale(1, 1);">
-                              <path id="yDp37FxBusyb1KL5" d="M9.9451592,0.0 L107.51329874,0.0 C110.15091896,0.0 112.68050912,1.04779055 114.54558826,2.91286969 116.41066740000001,4.77794883 117.45845795,7.30753898 117.45845795,9.9451592 L117.45845795,181.24693369 C117.45845795,183.88455391 116.41066740000001,186.41414407 114.54558826,188.27922321 112.68050912,190.14430235 110.15091896,191.1920929 107.51329874,191.1920929 L9.9451592,191.1920929 C7.30753899,191.1920929 4.77794883,190.14430235 2.91286969,188.27922321 1.04779055,186.41414406 0.0,183.88455391 0.0,181.24693369 L0.0,9.9451592 C0.0,7.30753899 1.04779055,4.77794883 2.91286969,2.91286969 4.77794883,1.04779055 7.30753899,0.0 9.9451592,0.0 Z"
-                              style="fill:#ff88d7;opacity:1.0;">
-                              </path>
-                            </g>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <div id="m0eIQ05wb7r52oPW" style="z-index:19;">
-                      <div id="ejSgK6EmGsK1qcKO" style="padding-top:103.28%;transform:rotate(0deg);">
-                        <div id="V1ZFuiwMDGaWeuS7" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
-                          <svg id="YvTjyND8ZS8PSTGt" viewBox="0 0 500.0 516.4" style="width:100%;height:100%;opacity:1.0;overflow:hidden;position:absolute;top:0%;left:0%;background:url('data:image/png;base64,');">
-                            <g id="s5jbDMAeJ0pMSAQN" style="transform:scale(1, 1);">
-                              <foreignObject id="mFowvc4JPvBBC0qb" style="width:500px;height:516.4px;">
-                                <div id="pDK3dEK4SMxcyg9O" style="clip-path:path('M494.1000061035156,427.29998779296875 C494.1000061035156,473.29998779296875 456.8000068664551,510.49998474121094 410.90000915527344,510.49998474121094 L89.0999984741211,510.49998474121094 C43.099998474121094,510.49998474121094 5.900001525878906,473.1999855041504 5.900001525878906,427.29998779296875 L5.900001525878906,89.0999984741211 C5.900001525878906,43.099998474121094 43.20000076293945,5.900001525878906 89.0999984741211,5.900001525878906 L410.89998626708984,5.900001525878906 C456.89998626708984,5.900001525878906 494.09998321533203,43.20000076293945 494.09998321533203,89.0999984741211 L494.09998321533203,427.30001068115234 Z');">
-                                  <div id="W75SRikDOiKuxDNZ" style="transform:scale(1, 1);transform-origin:250px 258px;">
-                                    <img src="images/2167f69df3b561bc8f2e9ae5fea7bf26.png" loading="lazy"
-                                    style="transform:translate(-2.3px, 5.9px) rotate(0deg);transform-origin:252.3px 252.3px;width:504.6px;height:504.6px;display:block;opacity:1.0;object-fit:fill;">
-                                  </div>
-                                </div>
-                              </foreignObject>
-                              <path id="mjMZMyLokXYIFt90" d="M410.8999938964844,516.4000244140625 L89.0999984741211,516.4000244140625 C40.0,516.4000244140625 0.0,476.3999938964844 0.0,427.29998779296875 L0.0,89.0999984741211 C0.0,40.0 40.0,0.0 89.0999984741211,0.0 L410.89998626708984,0.0 C460.0,0.0 500.0,40.0 500.0,89.0999984741211 L500.0,427.2000045776367 C500.0,476.4000053405762 460.0,516.4000015258789 410.9000015258789,516.4000015258789 Z M89.0999984741211,11.800000190734863 C46.5,11.800000190734863 11.799995422363281,46.500000953674316 11.799995422363281,89.10000324249268 L11.799995422363281,427.2000093460083 C11.799995422363281,469.8000078201294 46.499996185302734,504.5000123977661 89.0999984741211,504.5000123977661 L410.89998626708984,504.5000123977661 C453.49998474121094,504.5000123977661 488.19998931884766,469.80001163482666 488.19998931884766,427.2000093460083 L488.19998931884766,89.0999984741211 C488.19998931884766,46.5 453.4999885559082,11.799995422363281 410.89998626708984,11.799995422363281 L89.0999984741211,11.799995422363281 Z"
-                              style="fill:#3c55ff;opacity:1.0;">
-                              </path>
-                            </g>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <div id="iFH7aL6BWQWVy2Fq" style="z-index:20;">
-                      <div id="maEgMzcYMvnadJiO" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
-                        <div id="UmJePg5e3lTvmRh3" style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:flex-start;width:100%;height:100%;">
-                          <p id="RmXIYoYy4k8ddD86" style="color:#3c55ff;direction:rtl;font-family:YAFdJsyuOPM-0;margin-right:0em;line-height:1.09688905em;text-align:center;text-transform:uppercase;letter-spacing:0.008em;">
-                            <span id="sXeAUKZ0u2FihKNH" style="color:#3c55ff;font-weight:500;">
-                              ريد دير بالعربيه
-                            </span>
-                            <br>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div id="iJOVK6ltLamu2wFl" style="z-index:25;">
-                      <div id="oE7rAENELOezxAgS" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
-                        <div id="jrlh6zgGBj4XczQh" style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:flex-start;width:100%;height:100%;">
-                          <p id="ntX4YIPIPPSUwg2u" style="color:#ff88d7;font-family:YAFdJsyuOPM-0;line-height:1.09943617em;text-transform:uppercase;letter-spacing:0.008em;">
-                            <span id="PcZgvhciusAkTWwh" style="color:#ff88d7;font-weight:500;">
-                              coming
-                            </span>
-                            <br>
-                          </p>
-                          <p id="o203oP38WjQ0ujcr" style="color:#ff88d7;direction:ltr;font-family:YAFdJsyuOPM-0;margin-left:0em;line-height:1.09943617em;text-align:left;text-transform:uppercase;letter-spacing:0.008em;">
-                            <span id="OBHE3PGU9JgdBzkX" style="color:#ff88d7;font-weight:500;">
-                              soon.
-                            </span>
-                            <br>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div id="S5tp02pheuOxuDHP" style="z-index:22;">
-                      <div id="fwP0LZqUtjz0Sf2X" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
-                        <div id="tt39smcaJCAhaMLk" style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:flex-start;width:100%;height:100%;">
-                          <p id="r4fNIcNuXkC2aKZY" style="color:#000000;direction:rtl;font-family:YAFdJs2qTWQ-0;margin-right:0em;line-height:1.49703089em;text-align:right;text-transform:none;letter-spacing:0.005em;">
-                            <span id="bMsRZJkjA6ATQ7B7" style="color:#000000;font-weight:700;">
-                              يتضمن الاتي:
-                            </span>
-                            <br>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div id="dRhQwQAza4rRlK6G" style="z-index:23;">
-                      <div id="kyY20d6bGGWl7ngk" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
-                        <div id="cNGtbyPNnpx3kthF" style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:flex-start;width:100%;height:100%;">
-                          <p id="GwkcDYpL91sWPO5v" style="color:#000000;direction:rtl;font-family:YAFdJs2qTWQ-0;margin-right:0em;line-height:1.49703089em;text-align:right;text-transform:none;letter-spacing:0.005em;">
-                            <span id="lomfHRf6saqN3TY0" style="color:#000000;font-weight:700;">
-                              جزء القراءة:
-                            </span>
-                            <span id="nxWObMoSNLD90JW6" style="color:#000000;">
-                              اقرأ مجموعة واسعة من القصص والمقالات والسير الذاتية الجذابة والمزيد للقراء
-                              الصغار.
-                            </span>
-                            <br>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div id="bEkxm4IdRVfN8L4e" style="z-index:24;">
-                      <div id="d5i9D8H7hDk6fb1F" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
-                        <div id="UV2oGlpiAZitWRqT" style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:flex-start;width:100%;height:100%;">
-                          <p id="CYEvicCirK4vqOkV" style="color:#000000;direction:rtl;font-family:YAFdJs2qTWQ-0;margin-right:0em;line-height:1.49703089em;text-align:right;text-transform:none;letter-spacing:0.005em;">
-                            <span id="VdZfdBB2KKUw8mYI" style="color:#000000;font-weight:700;">
-                              جزء الكتابة:
-                            </span>
-                            <span id="QtHkHGTJXW8eNWG9" style="color:#000000;">
-                              يمكّن الكتاب الصغار من إنشاء ومشاركة قصصهم ومقالاتهم وقصائدهم.
-                            </span>
-                            <br>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div id="xOUrd8nhL7tOJtBh" style="display:grid;position:relative;grid-area:15 / 8 / 16 / 10;">
-                      <div id="sAtiju1FWbOJmQLT" style="display:grid;position:relative;grid-area:2 / 2 / 3 / 3;">
-                        <div id="ptQ5ikbYpehXgSmH" style="z-index:17;">
-                          <div id="AFV6GvyMk4LU1HGF" style="padding-top:25.67229474%;transform:rotate(0deg);">
-                            <div id="ha6yYQUOjJNaCsr5" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
-                              <svg id="oz9pwE9iZbfHYJDf" viewBox="0 0 64.0 16.4303" style="width:100%;height:100%;opacity:1.0;overflow:hidden;position:absolute;top:0%;left:0%;background:url('data:image/png;base64,');">
-                                <g id="hBh2njVPi3139PU6" style="transform:scale(1, 1);">
-                                  <path id="DaPh8Qp4ztEQWhKR" d="M8.21513462,0.0 L55.78486538,0.0 C57.96365455,0.0 60.053206180000004,0.86552063 61.59384278,2.40615722 63.13447937,3.94679382 64.0,6.03634545 64.0,8.21513462 L64.0,8.21513462 C64.0,12.75222819 60.32195895,16.43026924 55.78486538,16.43026924 L8.21513462,16.43026924 C6.03634545,16.43026924 3.94679382,15.56474861 2.40615722,14.02411202 0.86552063,12.48347542 0.0,10.39392379 0.0,8.21513462 L0.0,8.21513462 C0.0,6.03634545 0.86552063,3.94679382 2.40615722,2.40615722 3.94679382,0.86552063 6.03634545,0.0 8.21513462,0.0 Z"
-                                  style="fill:#3c55ff;opacity:1.0;">
-                                  </path>
-                                </g>
-                              </svg>
-                            </div>
-                          </div>
-                        </div>
-                        <div id="MofE237Cz3DJPlXN" style="z-index:18;">
-                          <div id="NU0XWK7sUHDT85HM" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
-                            <div id="GHYX9fExli7dGLZt" style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:center;width:100%;height:100%;">
-                              <p id="ZwtACgYhpmdO5xa4" style="color:#000000;direction:rtl;font-family:YAFdJs2qTWQ-0;line-height:1.45312727em;text-align:center;text-transform:none;letter-spacing:0.005em;">
-                                <span id="sAYe5DyQOPIYcvEW" style="color:#000000;">
-                                  جرب
-                                </span>
-                                <span id="QuvpnlCQC3zOcWk2" style="color:#000000;white-space:pre-wrap;">
-                                </span>
-                                <span id="apOKoxtMdgnPiW8g" style="color:#000000;">
-                                  بالعربيه
-                                </span>
-                                <br>
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div id="BupuS6yGVI5Cv6yw" style="z-index:8;">
-                    <div id="xBQsiRGhNVgOGEuc" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
-                      <div id="uGEO2sytjoDqQEyc" style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:flex-start;width:100%;height:100%;">
-                        <p id="OrZ1cOO1W0pboriv" style="color:#ff88d7;direction:rtl;font-family:YAFdJs2qTWQ-0;margin-right:0em;line-height:1.49823209em;text-align:center;text-transform:none;letter-spacing:0.005em;">
-                          <span id="uaKTpNAnnisWWAmX" style="color:#ff88d7;">
-                            قادم قريبا
-                          </span>
-                          <br>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="a2J53ulK0qeZ61HW" style="z-index:9;">
-            <div id="s22kNcRkuuZD6d36" style="padding-top:18429.76252889%;transform:rotate(0deg);">
-              <div id="oJk8K4x5RgrZDo4X" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
-                <svg id="gSEC7Rk1O2tJ384y" viewBox="0 0 5.933309934216368 1093.494930979369"
-                preserveAspectRatio="none" style="display:block;width:100%;height:100%;overflow:visible;opacity:1.0;min-height:1px;stroke:#000000;fill:#000000;background:url('data:image/png;base64,');">
-                  <g id="AgxLbJs40xV1OdED">
-                    <path d="M1.9999968740875147,1093.4913949306626 L3.933313060128853,0.0035360487063371693"
-                    style="fill:none;stroke-width:4px;stroke-linecap:butt;">
-                    </path>
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="details" style="position:relative;overflow:hidden;display:grid;align-items:center;grid-template-columns:auto 100rem auto;z-index:0;margin-top:-1px;">
-        <div id="IF8o7Q0QdY8ep21w" style="grid-area:1 / 1 / 2 / 4;display:grid;position:absolute;min-height:100%;min-width:100%;">
-          <div id="YSn9t3vUk0enr8DY" style="z-index:0;">
-            <div id="Voad8ypAkfwfpW60" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
-              <div id="SUojG6w1vYmwzji0" style="width:100%;height:100%;opacity:1.0;">
-                <div id="YNHy4jfzzCqlRtRz" style="background-color:#ff88d7;opacity:1.0;transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="fpRmQUimqHuWwdSi" style="display:grid;position:relative;grid-area:1 / 2 / 2 / 3;">
-          <div id="fxDp2JCGvfO95Wmq" style="z-index:4;">
-            <div id="CLPHJlZ9pdaLVM0E" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
-              <div id="rDIBHPQinbj0nBcG" style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:flex-start;width:100%;height:100%;">
-                <p id="bBGHWCni6HALxIGR" style="color:#3c55ff;direction:ltr;font-family:YAFdJsyuOPM-0;margin-left:0em;line-height:1.08928766em;text-align:left;text-transform:uppercase;letter-spacing:0.008em;">
-                  <span id="cOEeESB0t1rCn3Zy" style="color:#3c55ff;font-weight:500;">
-                    why did we make readdear!
-                  </span>
-                  <br>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div id="RFInwRiQwPaG4p1x" style="z-index:16;">
-            <div id="wOS4E2HkGpwGimtI" style="padding-top:0.76095137%;transform:rotate(0deg);">
-              <div id="gqTjOzcSqfvcOFnh" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
-                <svg id="aMKF2fVXIQIz5pXM" viewBox="0 0 788.4849685283177 5.999987131965128"
-                preserveAspectRatio="none" style="display:block;width:100%;height:100%;overflow:visible;opacity:1.0;min-height:1px;stroke:#000000;fill:#000000;background:url('data:image/png;base64,');">
-                  <g id="KsPH7nFh1btqJbxX">
-                    <path d="M0.005073068940703251,3.999993565982578 L788.4798954593771,1.9999935659825212"
-                    style="fill:none;stroke-width:4px;stroke-linecap:butt;">
-                    </path>
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div id="NvFZSfUHW3lB78Uy" style="z-index:3;">
-            <div id="q3Y0KzfmZv5BqTek" style="padding-top:100%;transform:rotate(0deg);">
-              <div id="WKJhRHRedYCbWyBS" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
-                <svg id="iKaoJ5O5AhBja1AV" viewBox="0 0 500.0 500.0" style="width:100%;height:100%;opacity:1.0;overflow:hidden;position:absolute;top:0%;left:0%;background:url('data:image/png;base64,');">
-                  <g id="ATtb8PyORovfs1Sl" style="transform:scale(1, 1);">
-                    <foreignObject id="DjNUuO4Pwr4dOBRa" style="width:500px;height:500px;">
-                      <div id="vSmcKCssQaO1N5QL" style="clip-path:path('M400.0,500.0 L100.0,500.0 C44.79999923706055,500.0 0.0,455.20001220703125 0.0,400.0 L0.0,100.0 C0.0,44.79999923706055 44.79999923706055,0.0 100.0,0.0 L400.0,0.0 C455.20000076293945,0.0 500.0,44.79999923706055 500.0,100.0 L500.0,400.0 C500.0,455.20001220703125 455.20001220703125,500.0 400.0,500.0 Z');">
-                        <div id="zI8INgNhgEPOuxw7" style="transform:scale(1, 1);transform-origin:250px 250px;">
-                          <img src="images/d93de7f2ab051c42b33a9d94bd783c92.jpg" loading="lazy"
-                          style="transform:translate(-80.85194376px, 0px) rotate(0deg);transform-origin:330.85194376px 250px;width:661.70388751px;height:500px;display:block;opacity:1.0;object-fit:fill;">
-                        </div>
-                      </div>
-                    </foreignObject>
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div id="q0mG9g1QIkvb8lri">
-            <div id="ZSqR9IzMBhOw8yhS" style="display:grid;position:relative;">
-              <div id="cwUGXr2OxHCeZ1fn" style="z-index:12;">
-                <div id="K8LevSJ01IpBGuch" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
-                  <div id="lCwoU4m8pdeTkrxB" style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:flex-start;width:100%;height:100%;">
-                    <p id="eTcbs6jZpwQReuR9" style="color:#3c55ff;direction:ltr;font-family:YAFdJsyuOPM-0;margin-left:0em;line-height:1.36589832em;text-align:center;text-transform:uppercase;letter-spacing:0.16em;">
-                      <span id="l6SZAOQ1ugcY77XX" style="color:#3c55ff;font-weight:700;">
-                        BRAIN DESTROING
-                      </span>
-                      <br>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div id="j1RRba1pZtnkVLYB" style="z-index:13;">
-                <div id="uUb1YWs1GLMvPR5r" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
-                  <div id="JnkqNoXrD3qhpWZt" style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:flex-start;width:100%;height:100%;">
-                    
-                       <br>
-                    </p>
-                    <p id="l3n6xAlAuQQC28AX" style="color:#3c55ff;direction:ltr;font-family:YAFdJs2qTWQ-0;margin-left:0em;line-height:1.4766478em;text-align:left;text-transform:none;letter-spacing:0.005em;">
-                      <span id="nkRkviQhJzjk2Tg0" style="color:#3c55ff;">
-                        The scroll-down method, which has become popular all over the Internet,
-                        disrupts the attention span and reduces it to less than one minute.
-                      </span>
-                      <br>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="QK4bLtuwEzdNmvxG" style="z-index:15;">
-            <div id="BN7A0eDOWqDoTAGJ" style="padding-top:16462.60444751%;transform:rotate(0deg);">
-              <div id="fza9Un6IB4O4a0l8" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
-                <svg id="gAcZ2c4GpY76CHbr" viewBox="0 0 4.000000000000455 658.5041779004806"
-                preserveAspectRatio="none" style="display:block;width:100%;height:100%;overflow:visible;opacity:1.0;min-height:1px;stroke:#000000;fill:#000000;background:url('data:image/png;base64,');">
-                  <g id="kNJ4l2T4Go8EvO6e">
-                    <path d="M2.0000000000004547,658.5041779004807 L2.0000000000001137,1.1368683772161603E-13"
-                    style="fill:none;stroke-width:4px;stroke-linecap:butt;">
-                    </path>
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div id="hPQYkyDZYFB2y0FV" style="z-index:2;">
-            <div id="ij987Lpaixj0UXnP" style="padding-top:100%;transform:rotate(0deg);">
-              <div id="CAc88QX8275S0MsB" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
-                <svg id="hh0iqNi8xnLJn7ub" viewBox="0 0 500.0 500.0" style="width:100%;height:100%;opacity:1.0;overflow:hidden;position:absolute;top:0%;left:0%;background:url('data:image/png;base64,');">
-                  <g id="xqhznSWHpDI2IT2X" style="transform:scale(1, 1);">
-                    <foreignObject id="JpXKIstD8af7j1KI" style="width:500px;height:500px;">
-                      <div id="XV3rDlAswvY0dLLI" style="clip-path:path('M400.0,500.0 L100.0,500.0 C44.79999923706055,500.0 0.0,455.20001220703125 0.0,400.0 L0.0,100.0 C0.0,44.79999923706055 44.79999923706055,0.0 100.0,0.0 L400.0,0.0 C455.20000076293945,0.0 500.0,44.79999923706055 500.0,100.0 L500.0,400.0 C500.0,455.20001220703125 455.20001220703125,500.0 400.0,500.0 Z');">
-                        <div id="lXp8dpaumHJFfRWW" style="transform:scale(1, 1);transform-origin:250px 250px;">
-                          <img src="images/ed41eb28e9f3712253630922d0501b87.jpg" loading="lazy"
-                          style="transform:translate(-111.53532773px, -100.38179496px) rotate(0deg);transform-origin:358.74694454px 358.74694454px;width:717.49388908px;height:717.49388908px;display:block;opacity:1.0;object-fit:fill;">
-                        </div>
-                      </div>
-                    </foreignObject>
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div id="QXT5EIk71QQTf0Th">
-            <div id="QV9HJe4llFAgGYlo" style="display:grid;position:relative;">
-              <div id="MwhpTvmdhDIDe4hP" style="z-index:9;">
-                <div id="LohOBu6IBLeRbEZD" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
-                  <div id="UqBXaaKh6BQmWdoZ" style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:flex-start;width:100%;height:100%;">
-                    <p id="yZ6gIPeldScfcb8x" style="color:#3c55ff;direction:ltr;font-family:YAFdJsyuOPM-0;margin-left:0em;line-height:1.36589832em;text-align:center;text-transform:uppercase;letter-spacing:0.16em;">
-                      <span id="k7uD3h5mNHjCAau5" style="color:#3c55ff;font-weight:700;">
-                        BAD CHILDREN'S PLATFORMS
-                      </span>
-                      <br>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div id="gdjFyKmpFWGMAWkP" style="z-index:10;">
-                <div id="AjParU8jdIuxPZPq" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
-                  <div id="NeJIIslYqt6FZRrD" style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:flex-start;width:100%;height:100%;">
-                    <p id="o2Fvo54urkSOenbB" style="color:#3c55ff;direction:ltr;font-family:YAFdJs2qTWQ-0;margin-left:0em;line-height:1.4766478em;text-align:left;text-transform:none;letter-spacing:0.005em;">
-                      <span id="p1nG6du4TrogbylW" style="color:#3c55ff;">
-                        The majority of children's platforms now contain adult contents. as a
-                        result; The majority of them become harmful for our kids.
-                      </span>
-                      <br>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="wW5yH3QhT7mHkwcl" style="z-index:14;">
-            <div id="XY17iztVDkV6uDQB" style="padding-top:16462.60444751%;transform:rotate(0deg);">
-              <div id="ZpQE8rV5gNmebwCp" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
-                <svg id="uWFgcLcDCrED1hNZ" viewBox="0 0 4.000000000000398 658.5041779004807"
-                preserveAspectRatio="none" style="display:block;width:100%;height:100%;overflow:visible;opacity:1.0;min-height:1px;stroke:#000000;fill:#000000;background:url('data:image/png;base64,');">
-                  <g id="I9g6sgjqBhWQRfiP">
-                    <path d="M2.000000000000341,658.5041779004807 L2.000000000000057,0.0"
-                    style="fill:none;stroke-width:4px;stroke-linecap:butt;">
-                    </path>
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div id="qZJjAXVP4bKghcDy" style="z-index:1;">
-            <div id="KCB9b3yXS8ilFj6A" style="padding-top:100%;transform:rotate(0deg);">
-              <div id="oPJKJuAaOwNefDME" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
-                <svg id="oHTgeR9ZJUczNbay" viewBox="0 0 500.0 500.0" style="width:100%;height:100%;opacity:1.0;overflow:hidden;position:absolute;top:0%;left:0%;background:url('data:image/png;base64,');">
-                  <g id="dkbeK47psr3kRPTw" style="transform:scale(1, 1);">
-                    <foreignObject id="hJWht75UTmcOldbN" style="width:500px;height:500px;">
-                      <div id="sW5yfEDz0qXZwEs7" style="clip-path:path('M400.0,500.0 L100.0,500.0 C44.79999923706055,500.0 0.0,455.20001220703125 0.0,400.0 L0.0,100.0 C0.0,44.79999923706055 44.79999923706055,0.0 100.0,0.0 L400.0,0.0 C455.20000076293945,0.0 500.0,44.79999923706055 500.0,100.0 L500.0,400.0 C500.0,455.20001220703125 455.20001220703125,500.0 400.0,500.0 Z');">
-                        <div id="POULVX7HxZPV9lEo" style="transform:scale(1, 1);transform-origin:250px 250px;">
-                          <img src="images/cdd1d2dce57ba05ec8b9a8eea09f1bce.jpg" loading="lazy"
-                          style="transform:translate(-99.24330617px, 0px) rotate(0deg);transform-origin:349.24330617px 250px;width:698.48661234px;height:500px;display:block;opacity:1.0;object-fit:fill;">
-                        </div>
-                      </div>
-                    </foreignObject>
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div id="SqozA4mUfYaGMZbo">
-            <div id="Jvk7QhbWnkvRtJFP" style="display:grid;position:relative;">
-              <div id="WCCSEQDJeMM6S5N1" style="z-index:6;">
-                <div id="r27Btrkak9iUllcs" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
-                  <div id="m6UZWmUL4SVzmRzS" style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:flex-start;width:100%;height:100%;">
-                    <p id="oqeVYzZmtmU8puqB" style="color:#3c55ff;direction:ltr;font-family:YAFdJsyuOPM-0;margin-left:0em;line-height:1.36589832em;text-align:center;text-transform:uppercase;letter-spacing:0.16em;">
-                      <span id="so7UbgYYghsZIsEm" style="color:#3c55ff;font-weight:700;">
-                        THERE IS NO READING, AND IT IS NOT FREE.
-                      </span>
-                      <br>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div id="v53euYji5Fj6FXsM" style="z-index:7;">
-                <div id="R5QBT9ovWepdK6tR" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
-                  <div id="az4Y4T76VzmYrHPN" style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:flex-start;width:100%;height:100%;">
-                    <p id="Eu6P6OC6FAUpNyp7" style="color:#3c55ff;direction:ltr;font-family:YAFdJs2qTWQ-0;margin-left:0em;line-height:1.4766478em;text-align:left;text-transform:none;letter-spacing:0.005em;">
-                      <span id="MJCZeLIzwAa2yumS" style="color:#3c55ff;">
-                        The kids don't have the choice to read as he has to scroll down on social
-                        media, and that is because reading is not free and accessible.
-                      </span>
-                      <br>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="page-4" style="position:relative;overflow:hidden;display:grid;align-items:center;grid-template-columns:auto 100rem auto;z-index:0;margin-top:-1px;">
-        <div id="Zeh5caqVZ5D9Uh6Z" style="grid-area:1 / 1 / 2 / 4;display:grid;position:absolute;min-height:100%;min-width:100%;">
-          <div id="GTHj1uLBW4SQEdR3" style="z-index:0;">
-            <div id="zCHborb5Y7KNa4Sn" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
-              <div id="GQXOLH4jkzTG79A0" style="width:100%;height:100%;opacity:1.0;">
-                <div id="Bf4AeuDfT9sY0UCp" style="background-color:#3c55ff;opacity:1.0;transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="MAqyDHPIFJMKEVeS" style="display:grid;position:relative;grid-area:1 / 2 / 2 / 3;">
-          <div id="GGG0icK4K0ebrJ1M" style="z-index:1;">
-            <div id="d88QM4ooYDChTDaL" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
-              <div id="wlrXimUwcELWoI6a" style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:flex-start;width:100%;height:100%;">
-                <p id="AEt0Ro4KtFWMYJFk" style="color:#ff88d7;direction:ltr;font-family:YAFdJsyuOPM-0;margin-left:0em;line-height:1.08928766em;text-align:left;text-transform:uppercase;letter-spacing:0.008em;">
-                  <span id="EfX4nftI6BPCI2Rw" style="color:#ff88d7;font-weight:500;">
-                    ReadDear aimed to:
-                  </span>
-                  <br>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div id="kLJL73nqIyLIVkAw" style="z-index:7;">
-            <div id="q5XRCgHZw3e872P7" style="padding-top:0.67794111%;transform:rotate(0deg);">
-              <div id="ci6GukPQfq2C9vke" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
-                <svg id="a2WSEztXS8uqn9Jv" viewBox="0 0 590.0217510430297 4.000000000000057"
-                preserveAspectRatio="none" style="display:block;width:100%;height:100%;overflow:visible;opacity:1.0;min-height:1px;stroke:#ffffff;fill:#ffffff;background:url('data:image/png;base64,');">
-                  <g id="NT3kSbREMkMqC4U0">
-                    <path d="M0.0,2.000000000000057 L590.0217510430298,2.0" style="fill:none;stroke-width:4px;stroke-linecap:butt;">
-                    </path>
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div id="FMJ4KA5m088M1OnZ">
-            <div id="HtsijUsLLapznHV0" style="display:grid;position:relative;">
-              <div id="vC3hAwnJQErLteYE" style="z-index:12;">
-                <div id="d1p6iVcXsr9X8GLU" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
-                  <div id="pUMQIilnVN82pypD" style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:flex-start;width:100%;height:100%;">
-                    <p id="U8FzZxJsukWdQhON" style="color:#ff88d7;direction:ltr;font-family:YAFdJsyuOPM-0;margin-left:0em;line-height:1.37652902em;text-align:center;text-transform:uppercase;letter-spacing:0.16em;">
-                      <span id="q4QAXvn3GGrTsPb4" style="color:#ff88d7;font-weight:700;">
-                        cfree a free and easily accessible platform
-                      </span>
-                      <br>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div id="bUU8X6Ii2bm9ahXm" style="z-index:13;">
-                <div id="X6kIAQ67S87FEfau" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
-                  <div id="Pou6WkFTdvCJHtos" style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:flex-start;width:100%;height:100%;">
-                    <p id="uiBnWIKh71eBp1EU" style="color:#ff88d7;direction:ltr;font-family:YAFdJs2qTWQ-0;margin-left:0em;line-height:1.46829859em;text-align:left;text-transform:none;letter-spacing:0.005em;">
-                      <span id="rA7jhwFz3P2m3sM8" style="color:#ff88d7;">
-                        for children, making it convenient for them to immerse themselves in the
-                        joy of reading
-                      </span>
-                      <br>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="yLIySF9RcoRxHiA5" style="z-index:3;">
-            <div id="Ske1bVpW9k4QKQGm" style="padding-top:100%;transform:rotate(0deg);">
-              <div id="V8FKQ2nqUkoyu6Gz" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
-                <svg id="gG34C35CZj4wY8Fm" viewBox="0 0 500.0 500.0" style="width:100%;height:100%;opacity:1.0;overflow:hidden;position:absolute;top:0%;left:0%;background:url('data:image/png;base64,');">
-                  <g id="IeNj8r0yFjapV8a0" style="transform:scale(1, 1);">
-                    <foreignObject id="ukqRxcKyGi70UMJ0" style="width:500px;height:500px;">
-                      <div id="SiXnrLUw0KJMyMvR" style="clip-path:path('M400.0,500.0 L100.0,500.0 C44.79999923706055,500.0 0.0,455.20001220703125 0.0,400.0 L0.0,100.0 C0.0,44.79999923706055 44.79999923706055,0.0 100.0,0.0 L400.0,0.0 C455.20000076293945,0.0 500.0,44.79999923706055 500.0,100.0 L500.0,400.0 C500.0,455.20001220703125 455.20001220703125,500.0 400.0,500.0 Z');">
-                        <div id="jfDG9fThHEWWHM4h" style="transform:scale(1, 1);transform-origin:250px 250px;">
-                          <img src="images/0e82a462ffc19f72b36416ff97ebead3.jpg" loading="lazy"
-                          style="transform:translate(-88.39277436px, 0px) rotate(0deg);transform-origin:300px 250px;width:600px;height:500px;display:block;opacity:1.0;object-fit:fill;">
-                        </div>
-                      </div>
-                    </foreignObject>
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div id="AphhmHrigBDy8XZf" style="z-index:6;">
-            <div id="f9rmuRDKIScpkwse" style="padding-top:0.33897055%;transform:rotate(0deg);">
-              <div id="Iy1j6XJmwgwChtUN" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
-                <svg id="nFOr4rHQUt3R4Pde" viewBox="0 0 1180.0435020860589 4.000000000000114"
-                preserveAspectRatio="none" style="display:block;width:100%;height:100%;overflow:visible;opacity:1.0;min-height:1px;stroke:#ffffff;fill:#ffffff;background:url('data:image/png;base64,');">
-                  <g id="IEM7RiD7VU2hoI6P">
-                    <path d="M1.4210854715202004E-14,2.0000000000001137 L1180.043502086059,2.0"
-                    style="fill:none;stroke-width:4px;stroke-linecap:butt;">
-                    </path>
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div id="pi860pZOrUmAWtNz">
-            <div id="oxhbrHlQIcxPG6Of" style="display:grid;position:relative;">
-              <div id="QgY2DV2PhFxZxbii" style="z-index:9;">
-                <div id="pxBMn28djE7KalPA" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
-                  <div id="l1ZNK2hlA9RYDAe9" style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:flex-start;width:100%;height:100%;">
-                    <p id="NY0K1vz85zJgI1nX" style="color:#ff88d7;direction:ltr;font-family:YAFdJsyuOPM-0;margin-left:0em;line-height:1.37652902em;text-align:center;text-transform:uppercase;letter-spacing:0.16em;">
-                      <span id="MItBDjzZsJD2zxRk" style="color:#ff88d7;font-weight:700;">
-                        Create a platform for children
-                      </span>
-                      <br>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div id="YqMkKrzclHtlSEbr" style="z-index:10;">
-                <div id="bQVvO7fBOWuBz7eG" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
-                  <div id="czrRBcbD8KB5f4OB" style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:flex-start;width:100%;height:100%;">
-                    <p id="RpXu0mtgE6VdWjHf" style="color:#ff88d7;direction:ltr;font-family:YAFdJs2qTWQ-0;margin-left:0em;line-height:1.46829859em;text-align:left;text-transform:none;letter-spacing:0.005em;">
-                      <span id="X8Z5vf58FdrMpIYj" style="color:#ff88d7;">
-                        Ensures their safety from any form of abuse that could negatively impact
-                        their childhood. The platform provides a secure environment where parents
-                        can confidently leave their children, knowing that it serves as a beneficial
-                        shelter for them.
-                      </span>
-                      <br>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="Uq62tOhPsOyIAc4Y" style="z-index:4;">
-            <div id="AR2V29Qn7XfeoZez" style="padding-top:100%;transform:rotate(0deg);">
-              <div id="lhLWzfwSjZffMlmJ" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
-                <svg id="PxHeee7H6iJWGOFP" viewBox="0 0 500.0 500.0" style="width:100%;height:100%;opacity:1.0;overflow:hidden;position:absolute;top:0%;left:0%;background:url('data:image/png;base64,');">
-                  <g id="FwpFAeyt72oyC6hw" style="transform:scale(1, 1);">
-                    <foreignObject id="JxbBOp1KlY06Xpu6" style="width:500px;height:500px;">
-                      <div id="hh62d0Ax5VM6kERv" style="clip-path:path('M400.0,500.0 L100.0,500.0 C44.79999923706055,500.0 0.0,455.20001220703125 0.0,400.0 L0.0,100.0 C0.0,44.79999923706055 44.79999923706055,0.0 100.0,0.0 L400.0,0.0 C455.20000076293945,0.0 500.0,44.79999923706055 500.0,100.0 L500.0,400.0 C500.0,455.20001220703125 455.20001220703125,500.0 400.0,500.0 Z');">
-                        <div id="LAR8V7ohcIcllNAM" style="transform:scale(1, 1);transform-origin:250px 250px;">
-                          <img src="images/ca344c7b4a4870cff4afe6e0ecba8d08.jpg" alt="Superhero Child. Kids Costume. Concept of Strength and Justicec. Saving World."
-                          loading="lazy" style="transform:translate(0px, 0px) rotate(0deg);transform-origin:375px 250px;width:750px;height:500px;display:block;opacity:1.0;object-fit:fill;">
-                        </div>
-                      </div>
-                    </foreignObject>
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div id="tl1wd6dvEnfnJNh1" style="z-index:5;">
-            <div id="JdLMpE6uQGymHQcl" style="padding-top:0.33897055%;transform:rotate(0deg);">
-              <div id="SjjYkZJHpSZPoDkD" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
-                <svg id="H9iC3JlPWYjF1Wmc" viewBox="0 0 1180.043502086059 4.000000000000114"
-                preserveAspectRatio="none" style="display:block;width:100%;height:100%;overflow:visible;opacity:1.0;min-height:1px;stroke:#ffffff;fill:#ffffff;background:url('data:image/png;base64,');">
-                  <g id="cWesQtWfODgheerm">
-                    <path d="M1.2789769243681803E-13,2.0000000000001137 L1180.043502086059,2.0"
-                    style="fill:none;stroke-width:4px;stroke-linecap:butt;">
-                    </path>
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div id="LbQhBhNW7uKtMrZp">
-            <div id="p3YCDnCYUNENnFO0" style="display:grid;position:relative;">
-              <div id="CgUhnvQtv6W42G1O" style="z-index:15;">
-                <div id="RF9ZtzLmyl0HUszs" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
-                  <div id="KsHAZAqgMwdL0jLM" style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:flex-start;width:100%;height:100%;">
-                    <p id="pnmzP79EnMsdTwdt" style="color:#ff88d7;direction:ltr;font-family:YAFdJsyuOPM-0;margin-left:0em;line-height:1.37652902em;text-align:center;text-transform:uppercase;letter-spacing:0.16em;">
-                      <span id="zlzvDJ3FrN8nBKuN" style="color:#ff88d7;font-weight:700;">
-                        Creating a platform that enhances a child's concentration rate
-                      </span>
-                      <br>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div id="R9yNiiwvCBjB0vjH" style="z-index:16;">
-                <div id="GZVi6Nn3pojMGp44" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
-                  <div id="Ao4rwZdaZiqVRQgI" style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:flex-start;width:100%;height:100%;">
-                    <p id="crfycFGvFtG16wwb" style="color:#ff88d7;direction:ltr;font-family:YAFdJs2qTWQ-0;margin-left:0em;line-height:1.46829859em;text-align:left;text-transform:none;letter-spacing:0.005em;">
-                      <span id="YqfudNv7zJLCZ0qE" style="color:#ff88d7;">
-                        through reading is an effective solution to the problem because reading
-                        is a process that demands a significant amount of concentration and time.
-                      </span>
-                      <br>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="UYkVHBhBSKscvxdj" style="z-index:2;">
-            <div id="hTSgG5xg7HCrK8rt" style="padding-top:100%;transform:rotate(0deg);">
-              <div id="flLdsF6G4U1Oy4kH" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
-                <svg id="W2lt3HVPbv7xJgah" viewBox="0 0 500.0 500.0" style="width:100%;height:100%;opacity:1.0;overflow:hidden;position:absolute;top:0%;left:0%;background:url('data:image/png;base64,');">
-                  <g id="DR6y15UCwHCfzBDU" style="transform:scale(1, 1);">
-                    <foreignObject id="k4FLYO3vqu8bh83O" style="width:500px;height:500px;">
-                      <div id="s9PYQmWNN102wP80" style="clip-path:path('M400.0,500.0 L100.0,500.0 C44.79999923706055,500.0 0.0,455.20001220703125 0.0,400.0 L0.0,100.0 C0.0,44.79999923706055 44.79999923706055,0.0 100.0,0.0 L400.0,0.0 C455.20000076293945,0.0 500.0,44.79999923706055 500.0,100.0 L500.0,400.0 C500.0,455.20001220703125 455.20001220703125,500.0 400.0,500.0 Z');">
-                        <div id="bva20CYtW0TejFmQ" style="transform:scale(1, 1);transform-origin:250px 250px;">
-                          <img src="images/49d1f37197223c1d5e447baf445ba4f7.jpg" alt="Student Using Computer at Home for Online Class"
-                          loading="lazy" style="transform:translate(0px, -103.01317425px) rotate(0deg);transform-origin:262.7935154px 394.1902731px;width:525.5870308px;height:788.38054619px;display:block;opacity:1.0;object-fit:fill;">
-                        </div>
-                      </div>
-                    </foreignObject>
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="contact" style="position:relative;overflow:hidden;display:grid;align-items:center;grid-template-columns:auto 100rem auto;z-index:0;margin-top:-1px;">
-        <div id="dmrwFubrMjJ2qpuV" style="grid-area:1 / 1 / 2 / 4;display:grid;position:absolute;min-height:100%;min-width:100%;">
-          <div id="m6qWQGtwOkSzne7v" style="z-index:0;">
-            <div id="TZhk81yeGVRWW09I" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
-              <div id="Qe2FZFgZhclVjATN" style="width:100%;height:100%;opacity:1.0;">
-                <div id="tGQQdwJfJfR21D5Z" style="background-color:#ff88d7;opacity:1.0;transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="mihrRpmAIsdoDhbR" style="display:grid;position:relative;grid-area:1 / 2 / 2 / 3;">
-          <div id="cIPbYlvdEJUIzXUM" style="z-index:4;">
-            <div id="TleBWGjYHvmt9odn" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
-              <div id="mwE3PAP772ZHAZcV" style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:flex-start;width:100%;height:100%;">
-                <p id="L5HVHfaCaHRbXJRr" style="color:#000000;direction:ltr;font-family:YAFdJt8dAY0-0;line-height:1.39047248em;text-align:center;">
-                  <span id="t0I67tMc7ziDVKu1" style="color:#000000;">
-                    ©ReadDear, Hassan alkady, 2023
-                  </span>
-                  <br>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div id="ehyK7jgKzPYGjbTx" style="z-index:1;">
-            <div id="x8LWBuINSyRA3Ru7" style="padding-top:100%;transform:rotate(0deg);">
-              <div id="lh4W8CTlznZ0ltps" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
-                <div id="R3nOAVDsQj82nRfF" style="width:100%;height:100%;opacity:1.0;">
-                  <div id="MP0tPJ6Erj7GxmkI" style="transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
-                    <div id="jTOOYreH81xNSI7E" style="width:calc(100% * max(1, var(--scale-fill, 1)));height:calc(100% / min(1, var(--scale-fill, 1)));position:absolute;top:50%;left:50%;opacity:1.0;animation:pulse 1.5s ease-in-out infinite;">
-                      <img src="images/2167f69df3b561bc8f2e9ae5fea7bf26.png" loading="lazy"
-                      style="width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%;transform:translate(-50%, -50%) rotate(0deg);">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="xkPc7w8xFkJeqVke" style="z-index:2;">
-            <div id="nztZxaGKlEvoRimV" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
-              <div id="DuXPrrX5jdbOWYtc" style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:flex-start;width:100%;height:100%;">
-                <p id="S6Ak3UCiDK6u8dnZ" style="color:#000000;direction:ltr;font-family:YAFdJt8dAY0-0;line-height:1.37826479em;text-align:center;">
-                  <span id="EtKQFWKipOZvVvOf" style="color:#000000;font-weight:700;">
-                    contact at
-                  </span>
-                  <br>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div id="A64Gb6dYDsuknnQN" style="z-index:3;">
-            <div id="m9r1uhAcDs6PDXuB" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
-              <div id="ZnfrH1inNJGJv5FW" style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:flex-start;width:100%;height:100%;">
-                <p id="JcXbitHQDPyVLMJF" style="color:#000000;direction:ltr;font-family:YAFdJt8dAY0-0;line-height:1.39047248em;text-align:center;">
-                  <span id="knWnW9HdQAH8K07N" style="color:#000000;">
-                    contact@readdear.com
-                  </span>
-                  <br>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <script src="js/939898b427480d700449229ff00dbb8a6f9f77442b532f697866e6914ab8843a.js"
-      async="" nonce="">
-      </script>
-      <script src="js/ba31d07a27d7a820d68d3a43af48ee7024acef0c97b467d0e44da1d9e9491f0e.js"
-      async="" nonce="">
-      </script>
-    </div>
-    <script nonce="">
-      
-  </body>
+</section>
+<!-------Video End-------> 
+<!-------About End------->
 
+<section class="about section-padding prelative" data-scroll-index='1'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="sectioner-header text-center">
+          <h3>What is ReadDear Aims To?</h3>
+          <span class="line"></span>
+        </div>
+        <div class="section-content text-center">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="icon-box wow fadeInUp" data-wow-delay="0.2s"> <i class="fas fa-hand-holding-heart" aria-hidden="true"></i>
+                <h5>Free & Easy Access for Kids</h5>
+                <p>Our platform is free and user-friendly, making it simple for children to enjoy reading.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="icon-box wow fadeInUp" data-wow-delay="0.4s"> <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                <h5>A Safe Place for Children</h5>
+                <p>We prioritize child safety. Parents can trust our platform to protect their kids, ensuring a secure reading experience.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="icon-box wow fadeInUp" data-wow-delay="0.6s"> <i class="fa fa-bolt" aria-hidden="true"></i>
+                <h5>Boosting Concentration</h5>
+                <p>We help kids concentrate better through reading. Reading demands focus and time, and we're here to support young minds.</p>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-------About End-------> 
+
+
+<!-------Features Start------->
+<section class="feature section-padding" data-scroll-index='2'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="sectioner-header text-center">
+          <h3>Features</h3>
+          <span class="line"></span>
+          <p>Sed quis nisi nisi. Proin consectetur porttitor dui sit amet viverra. Fusce sit amet lorem faucibus, vestibulum ante in, pharetra ante.</p>
+        </div>
+        <div class="section-content text-center">
+          <div class="row">
+            <div class="col-md-4 col-sm-12">
+              <div class="media single-feature wow fadeInUp" data-wow-delay="0.2s">
+                <div class="media-body text-right media-right-margin">
+                  <h5>reading part</h5>
+                  <p>Read a vast collection of captivating stories, articles, biographies, and more for young readers.</p>
+                </div>
+                <div class="media-right icon-border"> <span class="fas fa-book" aria-hidden="true"></span> </div>
+              </div>
+              <div class="media single-feature wow fadeInUp" data-wow-delay="0.4s">
+                <div class="media-body text-right media-right-margin">
+                  <h5>writeing part</h5>
+                  <p>Empowers young writers to create and share their stories, articles, and poems.</p>
+                </div>
+                <div class="media-right icon-border"> <span class="fas fa-pencil-alt" aria-hidden="true"></span> </div>
+              </div>
+              
+            </div>
+            <div class="col-md-4 d-none d-md-block d-lg-block">
+              <div class="feature-mobile"> <img src="images/iphone-screen-with-shadow.png" class="img-fluid wow fadeInUp"/> </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <div class="media single-feature wow fadeInUp" data-wow-delay="0.2s">
+                <div class="media-left icon-border media-right-margin"> <span class="fa fa-check-double" aria-hidden="true"></span> </div>
+                <div class="media-body text-left">
+                  <h5>New Materials</h5>
+                  <p>We continuously upload new reading materials without interruption, ensuring a constant stream of fresh articles, biographies, stories, and more</p>
+                </div>
+              </div>
+              <div class="media single-feature wow fadeInUp" data-wow-delay="0.4s">
+                <div class="media-left icon-border media-right-margin"> <span class="fa fa-dollar-sign" aria-hidden="true"></span> </div>
+                <div class="media-body text-left">
+                  <h5>Free Forever</h5>
+                  <p>ReadDear is free forever and currently supported by ads. However, it will transition to being solely funded by donations and user support in the future.</p>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-------Features End-------> 
+
+
+
+
+
+<!-------Contact Start------->
+<section class="contact section-padding" data-scroll-index='6'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="sectioner-header text-center">
+          <h3>Contact us</h3>
+          <span class="line"></span>
+          <p>Sed quis nisi nisi. Proin consectetur porttitor dui sit amet viverra. Fusce sit amet lorem faucibus, vestibulum ante in, pharetra ante.</p>
+        </div>
+        <div class="section-content">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-8">
+              <form id="contact_form" action="">
+                <div class="row">
+                  <div class="col">
+                    <input type="text" id="your_name" class="form-input w-100" name="full-name" placeholder="Full Name" required>
+                  </div>
+                  <div class="col">
+                    <input type="email" id="email" class="form-input w-100" name="email" placeholder="Email" required>
+                  </div>
+                </div>
+                <input type="text" id="subject" class="form-input w-100" name="subject" placeholder="Subject">
+                <textarea class="form-input w-100" id="message" placeholder="Message" name="message"></textarea>
+                <button class="btn-grad w-100 text-uppercase" type="submit" name="button">submit</button>
+              </form>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-4">
+              <div class="contact-info white">
+                <div class="contact-item media"> <i class="fa fa-map-marker-alt media-left media-right-margin"></i>
+                  <div class="media-body">
+                    <p class="text-uppercase">Address</p>
+                    <p class="text-uppercase">coming as soon as posipole</p>
+                  </div>
+                </div>
+                <div class="contact-item media"> <i class="fa fa-envelope media-left media-right-margin"></i>
+                  <div class="media-body">
+                    <p class="text-uppercase">E-mail</p>
+                    <p class="text-uppercase"><a class="text-white" href="contact@readdear.com">contact@readdear.com</a> </p>
+                  </div>
+                </div>
+                <div class="contact-item media"> <i class="fa fa-clock media-left media-right-margin"></i>
+                  <div class="media-body">
+                    <p class="text-uppercase">Working Hours</p>
+                    <p class="text-uppercase">Mon, Fri 9.00 AM to 5.00PM.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-------Contact End-------> 
+
+
+
+<footer class="footer-copy">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <p>2023 &copy;ReadDear, Hassan alkady, 2018 &copy; Website Design Owned And Designed by <a href="http://w3Template.com" target="_blank" rel="dofollow">W3 Template</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script> 
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script> 
+<!-- scrollIt js --> 
+<script src="js/scrollIt.min.js"></script> 
+<script src="js/wow.min.js"></script> 
+<script>
+	wow = new WOW();
+	wow.init();
+$(document).ready(function(e) {
+
+	$('#video-icon').on('click',function(e){
+	e.preventDefault();
+	$('.video-popup').css('display','flex');
+	$('.iframe-src').slideDown();
+	});
+	$('.video-popup').on('click',function(e){
+	var $target = e.target.nodeName;
+	var video_src = $(this).find('iframe').attr('src');
+	if($target != 'IFRAME'){
+	$('.video-popup').fadeOut();
+	$('.iframe-src').slideUp();
+	$('.video-popup iframe').attr('src'," ");
+	$('.video-popup iframe').attr('src',video_src);
+	}
+	});
+
+	$('.slider').bxSlider({
+	pager: false
+	});
+});
+    
+$(window).on("scroll",function () {
+
+	var bodyScroll = $(window).scrollTop(),
+	navbar = $(".navbar");
+	
+	if(bodyScroll > 50){
+	$('.navbar-logo img').attr('src','images/logo-black.png');
+	navbar.addClass("nav-scroll");
+
+}else{
+	$('.navbar-logo img').attr('src','images/logo.png');
+	navbar.removeClass("nav-scroll");
+}
+
+});
+$(window).on("load",function (){
+	var bodyScroll = $(window).scrollTop(),
+	navbar = $(".navbar");
+	
+	if(bodyScroll > 50){
+	$('.navbar-logo img').attr('src','images/logo-black.png');
+	navbar.addClass("nav-scroll");
+	}else{
+	$('.navbar-logo img').attr('src','images/logo-white.png');
+	navbar.removeClass("nav-scroll");
+	}
+
+	$.scrollIt({
+	
+	easing: 'swing',      // the easing function for animation
+	scrollTime: 900,       // how long (in ms) the animation takes
+	activeClass: 'active', // class given to the active nav element
+	onPageChange: null,    // function(pageIndex) that is called when page is changed
+	topOffset: -63
+	});
+});
+
+</script>
+</body>
 </html>
