@@ -1,0 +1,9 @@
+User-agent: Mediapartners-Google
+Disallow: 
+
+User-agent: *
+Disallow: /search
+Allow: /
+
+Allow: /ads.txt
+Sitemap: https://en.readdear.com/sitemap.xml
